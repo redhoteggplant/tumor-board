@@ -1,0 +1,90 @@
+.navbar {
+/*	background-color: rgb(38, 40, 110);*/	
+	background-color: white;
+	height: 80px;
+	box-shadow: 1px 0px 18px grey;
+	padding-top: 30px;
+	margin:-20px;
+}
+
+.container {
+/*	margin: -10px;
+*/	width: 100%;
+
+}
+
+#data_link {
+	margin-left: 10px;
+}
+
+h1 {
+	font-family: Nunito;
+	font-size: 20px;
+	margin-top: 50px;
+	margin-left: 50px;
+}
+
+h2{
+	font-family: Nunito;
+	font-size: 15px;
+	margin-top: 30px;
+	margin-left: 50px;
+}
+
+
+#logo {
+	width: 16%;
+	margin-left: 50px;
+	padding-top: 10px
+}
+
+#current {
+	background-color: rgb(25, 26, 69);
+	border-radius: 10px;
+	padding-left: 15px;
+	padding-right: 15px;
+	padding-top: 10px;
+	padding-bottom: 10px;
+}
+
+#current {
+	color: white;
+	margin-right: -20px;
+}
+
+#header {
+	color: rgb(25, 26, 69);
+	text-transform: uppercase;
+	letter-spacing: 2px;
+	font-size: 13px;
+	margin-bottom: 10px;
+}
+
+#patient_data {
+	margin-top: 50px;
+	width: 96%;
+	height: 500px;
+	text-align: left;
+	box-shadow: 1px 0px 18px grey;
+	padding-left: 30px;
+	padding-top: 30px;
+	padding-bottom: 30px;
+
+}
+
+tr {
+	border-color: white;
+	border-width: 1px;
+	border-style: solid;
+}
+
+tc {
+	font-family: Nunito;
+	color: rgb(38, 40, 110);
+	font-size: 13px;
+	letter-spacing: 1px;
+	float: right;
+	font-weight: 100px;
+	padding-right: 80px;
+	padding-top: 20px;
+}
