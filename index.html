@@ -121,11 +121,11 @@
 				$.each( JSON.parse(responseData) , function (key,val){
 					entry = "";
 
-					entry += "<th >" + val.patient.name.split(" ")[0] + "</th>";
+					entry += "<th>" + "<a href='profile.html?id=" + key + "'>" + val.patient.name.split(" ")[0] + "</a></th>";
 
 					// BUG: JS is being weird, cannot get last element of this array
 					// val.patient.name.split(" ").last() doesn't work
-					entry += "<th>" + val.patient.name.split(" ")[0] + "</th>";
+					entry += "<th>" + val.patient.name.split(" ")[1] + "</th>";
 					entry += "<th>" + val.patient.status + "</th>";
 
 					if (val.patient.last_tumor_board){
@@ -156,7 +156,7 @@
 					}
 
 					entry += "<th>" + val.patient.primary_physician + "</th>";
-					patients.push( "<tr id='" + key + "'>" + entry + "</tr>" );
+					patients.push( "<tr id=" + key + "'>" + entry + "</tr>" );
 				});
 				$(patients.join("")).appendTo( "#patient_data" );
 			},
@@ -166,6 +166,8 @@
 			}
 		});
 	});
+
+
 
 
 </script>
