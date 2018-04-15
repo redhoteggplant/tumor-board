@@ -121,9 +121,10 @@
 				$.each( JSON.parse(responseData) , function (key,val){
 					entry = "";
 
-					entry += "<th>" + val.patient.name.split(" ")[0] + "</th>";
+					entry += "<th >" + val.patient.name.split(" ")[0] + "</th>";
 
-					// problem: JS is being weird, cannot get last element of this array
+					// BUG: JS is being weird, cannot get last element of this array
+					// val.patient.name.split(" ").last() doesn't work
 					entry += "<th>" + val.patient.name.split(" ")[0] + "</th>";
 					entry += "<th>" + val.patient.status + "</th>";
 
@@ -137,6 +138,7 @@
 					last_updated = null;
 					$.each( val.patient.history , function( key, val ){
 						if (val.date){
+							// "16-06-15" to ["16", "06", "15"]
 							date = val.date.split("-");
 						}
 
