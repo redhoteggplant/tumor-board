@@ -5,7 +5,8 @@
 	 <meta name="viewport" content="width=device-width, initial-scale=1">
 	 <link rel="stylesheet" href="tumorboard.css">
      <link href="https://fonts.googleapis.com/css?family=Nunito" rel="stylesheet">
-     <script src="tumorboard.js"></script> 
+     <script type="text/javascript" src="src/jquery-3.3.1.js"></script>
+
 </head>
 
 
@@ -101,6 +102,70 @@
     		<th>Janis Deer</th>
  		</tr>
 	</table>
+	<ul>
+		
+	</ul>
 </div>
+
+<script>
+	mockDataUrl = "https://cdn.rawgit.com/ynst/tumor-board/develop/data/mock_data.json";
+
+	$(document).ready( function(){
+		$.ajax({
+			type: 'GET',
+			dataType: 'text',
+			crossDomain: true,
+			url: mockDataUrl,
+			success: function (responseData, textStatus, jqXHR) {
+				var patients=[];
+				$.each( JSON.parse(responseData) , function (key,val){
+					entry = "";
+
+					entry += "<th>" + val.patient.name.split(" ")[0] + "</th>";
+
+					// problem: JS is being weird, cannot get last element of this array
+					entry += "<th>" + val.patient.name.split(" ")[0] + "</th>";
+					entry += "<th>" + val.patient.status + "</th>";
+
+					if (val.patient.last_tumor_board){
+						// split to get an appropriate format for the Date class
+						entry += "<th>" + (new Date(val.patient.last_tumor_board.split("-"))).toString() + "</th>";
+					} else{
+						entry += "<th>" + "" + "</th>";
+					}
+
+					last_updated = null;
+					$.each( val.patient.history , function( key, val ){
+						if (val.date){
+							date = val.date.split("-");
+						}
+
+						if (last_updated == null || (new Date(date)).getTime() > last_updated.getTime())
+						{
+							last_updated = (new Date(date));
+							console.log(last_updated)
+						}
+					})
+
+					if (last_updated){
+						entry += "<th>" + last_updated.toString() + "</th>";
+					} else{
+						entry += "<th>" + "" + "</th>";
+					}
+
+					entry += "<th>" + val.patient.primary_physician + "</th>";
+					patients.push( "<tr id='" + key + "'>" + entry + "</tr>" );
+				});
+				$(patients.join("")).appendTo( "#patient_data" );
+			},
+			error: function (responseData, textStatus, errorThrown) {
+				console.log(responseData, textStatus, errorThrown);
+				alert('POST failed.');
+			}
+		});
+	});
+
+
+</script>
 
 </body>
