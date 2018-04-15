@@ -5,7 +5,8 @@
 	 <meta name="viewport" content="width=device-width, initial-scale=1">
 	 <link rel="stylesheet" href="tumorboard.css">
      <link href="https://fonts.googleapis.com/css?family=Nunito" rel="stylesheet">
-     <script src="tumorboard.js"></script> 
+     <script type="text/javascript" src="src/jquery-3.3.1.js"></script>
+
 </head>
 
 
@@ -101,6 +102,40 @@
     		<th>Janis Deer</th>
  		</tr>
 	</table>
+	<ul>
+		
+	</ul>
 </div>
+
+<script>
+	mockDataUrl = "https://cdn.rawgit.com/ynst/tumor-board/develop/data/mock_data.json";
+
+	$(document).ready( function(){
+		$.ajax({
+			type: 'GET',
+			dataType: 'text',
+			crossDomain: true,
+			url: mockDataUrl,
+			success: function (responseData, textStatus, jqXHR) {
+				var patients=[];
+				$.each( JSON.parse(responseData) , function (key,val){
+					entry = "";
+					entry += "<th>" + val.patient.name + "</th>";
+					entry += "<th>" + val.patient.name + "</th>";
+					patients.push( "<tr id='" + key + "'>" + entry + "</tr>" );
+				});
+				$( "<table/>", {
+					"class": "my-new-list",
+					html: patients.join("")
+				}).appendTo( "#patient_data" );
+			},
+			error: function (responseData, textStatus, errorThrown) {
+				console.log(responseData, textStatus, errorThrown);
+				alert('POST failed.');
+			}
+		});
+	});
+
+</script>
 
 </body>
