@@ -2,6 +2,7 @@ table {
 	width: 95%;
 	height: 90%;
 	align-content: center;
+	border-collapse: collapse;
 }
 
 #blank {
@@ -185,15 +186,41 @@ option {
 
 #liver {
 	position: absolute;
-	margin-left: 20px;
-	margin-top: 120px;
+	margin-left: 25px;
+	margin-top: 125px;
+}
+
+#annotation {
+	position: absolute;
+	margin-left: 200px;
+	margin-top: 370px;
+}
+
+#legend {
+	position: absolute;
+	overflow: auto;
+	right: 40px;
+	margin-top: 50px;
+	height: 345px;
+	width: 270px;
+}
+
+td {
+	text-align: left;
+    padding: 15px;
+	font-family: Nunito;
+	font-size: 15px;
+	color: rgb(137, 137, 137);
+	border-color: rgb(243, 243, 243);
+	border-width: 1px;
+	border-style: solid;
 }
 
 .black-circle
 {
     height: 15px;
     width: 15px;
-    background-color: #000;
+    background-color: #BFFF00;
     border-radius: 50%;
     display: inline-block;
 }
