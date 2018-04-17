@@ -224,18 +224,30 @@ td {
     display: inline-block;	
 }
 
-.circle .green-circle
+.green-circle
 {
+    height: 15px;
+    width: 15px;
+    border-radius: 50%;
+    display: inline-block;	
     background-color: #BFFF00;
 }
 
-.circle .blue-circle
+.blue-circle
 {
+    height: 15px;
+    width: 15px;
+    border-radius: 50%;
+    display: inline-block;	
     background-color: #67C8FF;
 }
 
-.circle .yellow-circle
+.yellow-circle
 {
-    background-color: #BFFF00;
+    height: 15px;
+    width: 15px;
+    border-radius: 50%;
+    display: inline-block;	
+    background-color: #FFFF00;
 }
  
