@@ -216,12 +216,26 @@ td {
 	border-style: solid;
 }
 
-.black-circle
+.circle
 {
     height: 15px;
     width: 15px;
-    background-color: #BFFF00;
     border-radius: 50%;
-    display: inline-block;
+    display: inline-block;	
+}
+
+.circle .green-circle
+{
+    background-color: #BFFF00;
+}
+
+.circle .blue-circle
+{
+    background-color: #67C8FF;
+}
+
+.circle .yellow-circle
+{
+    background-color: #BFFF00;
 }
  
