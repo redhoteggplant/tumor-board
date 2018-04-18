@@ -20,9 +20,9 @@ function yellowCircle() {
 
 function changeCircle() {
 	// var option = $('#annotation').find(":selected").value;
-	var select = document.getElementById("annotation");
-	var option = select.options[e.selectedIndex].value;
-	console.log(option);
+	var e = document.getElementById("annotation");
+	var option = e.options[e.selectedIndex].value;
+	
 	if (option == 1) {
 		$('#liver').annotatableImage(blueCircle);
 	} else if (option == 2) {
@@ -30,4 +30,12 @@ function changeCircle() {
 	} else {
 		$('#liver').annotatableImage(yellowCircle);
 	}
+}
+
+function addEntry() {
+	var table = document.getElementById("table1");
+	var row = table.insertRow(0);
+	var cell = row.insertCell(0);
+	var e = document.getElementById("annotation");
+	cell.innerHTML = e.options[e.selectedIndex].text;
 }

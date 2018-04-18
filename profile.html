@@ -36,7 +36,7 @@
             </div> 
             <div id="widget2">
                 <h3>TUMOR MODEL</h3>
-                <div id="liver">
+                <div id="liver" onclick="addEntry()">
                     <img src="https://github.com/ynst/tumor-board/blob/master/tumor.png?raw=true" height="180" alt="liver">
                 </div>
                 <select id="annotation" onchange="changeCircle()">
@@ -45,13 +45,8 @@
                     <option value="3">Surgery</option>
                 </select>
                 <div id = "legend">
-                    <table>
+                    <table id = "table1">
                         <tr><td>MRI<br>lalalalalalala</td></tr>
-                        <tr><td>Surgery<br>lalalalalalala</td></tr>
-                        <tr><td>Lesion<br>lalalalalalala</td></tr>
-                        <tr><td>Tumor<br>lalalalalalala</td></tr>
-                        <tr><td>Surgery</td></tr>
-                        <tr><td>Surgery</td></tr>
                     </table>
                 </div>
             </div>

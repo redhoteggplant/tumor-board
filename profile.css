@@ -201,7 +201,7 @@ option {
 	overflow: auto;
 	right: 40px;
 	margin-top: 50px;
-	height: 345px;
+	max-height: 345px;
 	width: 270px;
 }
 
