@@ -5,6 +5,15 @@ table {
 	border-collapse: collapse;
 }
 
+#graph {
+	background-color: gray;
+	height: 355px;
+	width: 200px;
+	margin-left: 31%;
+	position: absolute;
+	margin-top: 45px;
+}
+
 #blank {
 	display: flex;
 	height: auto;
