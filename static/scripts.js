@@ -1,21 +1,36 @@
 $(document).ready(function(){
 	function blueCircle() {
-		return $(document.createElement('span')).addClass('blue-circle')
+		return $(document.createElement('span')).addClass('circle blue-circle')
 	}
 
-	$('#liver').annotatableImage(blueCircle);
+	$('#liver').annotatableImage(blueCircle)
 
-	// $('#liver span.circle').seralizeAnnotations();
+	// mockServer = "";
+
+	// $('#button2save').on('click', function (){
+	// 	$.ajax({
+	// 		type: 'POST',
+	// 		dataType: 'application/json',
+	// 		crossDomain: true,
+	// 		url: mockServer,
+	// 		data: JSON.stringify($('#liver span.circle').seralizeAnnotations())
+	// 		success:  _madeSave.bind(this),
+	// 		error: function (responseData, textStatus, errorThrown) {
+	// 			console.log(responseData, textStatus, errorThrown);
+	// 			alert('POST failed.');
+	// 		}
+	// 	});
+	// });
 });
 
 function greenCircle() {
-	return $(document.createElement('span')).addClass('green-circle')
+	return $(document.createElement('span')).addClass('circle green-circle')
 }
 function blueCircle() {
-	return $(document.createElement('span')).addClass('blue-circle')
+	return $(document.createElement('span')).addClass('circle blue-circle')
 }
 function yellowCircle() {
-	return $(document.createElement('span')).addClass('yellow-circle')
+	return $(document.createElement('span')).addClass('circle yellow-circle')
 }
 
 function changeCircle() {

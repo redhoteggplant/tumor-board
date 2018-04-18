@@ -235,28 +235,16 @@ td {
 
 .green-circle
 {
-    height: 15px;
-    width: 15px;
-    border-radius: 50%;
-    display: inline-block;	
     background-color: #BFFF00;
 }
 
 .blue-circle
 {
-    height: 15px;
-    width: 15px;
-    border-radius: 50%;
-    display: inline-block;	
     background-color: #67C8FF;
 }
 
 .yellow-circle
 {
-    height: 15px;
-    width: 15px;
-    border-radius: 50%;
-    display: inline-block;	
     background-color: #FFFF00;
 }
  
